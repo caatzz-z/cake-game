@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Make Your Own Cake!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="slideTransition"></div>
+
+  <div id="screenMenu" class="screen active">
+    <h1 class="title">make your own cake !!</h1>
+    <button id="btnStart">
+      <img src="images/button_start.png" alt="Start" />
+    </button>
+  </div>
+
+  <div id="screenBase" class="screen">
+    <div class="left-panel">
+      <div class="cake-container">
+        <img id="cakeBase" class="cake-layer" />
+      </div>
+      <h2>choose your base color . . !</h2>
+      <div class="options-grid" id="optionsBase"></div>
+      <button id="btnNext1" disabled>
+        <img src="images/button_next.png" alt="Next" />
+      </button>
+    </div>
+  </div>
+
+  <div id="screenIcing" class="screen">
+    <div class="left-panel">
+      <div class="cake-container">
+        <img id="cakeBase" class="cake-layer" />
+        <img id="cakeIcing" class="cake-layer" />
+      </div>
+      <h2>choose icing ^^</h2>
+      <div class="options-grid" id="optionsIcing"></div>
+      <button id="btnNext2" disabled>
+        <img src="images/button_next.png" alt="Next" />
+      </button>
+    </div>
+  </div>
+
+  <div id="screenToppings" class="screen">
+    <div class="left-panel">
+      <div class="cake-container">
+        <img id="cakeBase" class="cake-layer" />
+        <img id="cakeIcing" class="cake-layer" />
+        <img id="cakeTopping1" class="cake-layer" />
+        <img id="cakeTopping2" class="cake-layer" />
+      </div>
+      <h2>choose toppings ! (max 2)</h2>
+      <div class="options-grid" id="optionsToppings"></div>
+      <button id="btnNext3" disabled>
+        <img src="images/button_next.png" alt="Next" />
+      </button>
+    </div>
+  </div>
+
+  <div id="screenPlate" class="screen">
+    <div class="left-panel">
+      <div class="cake-container">
+        <img id="cakeBase" class="cake-layer" />
+        <img id="cakeIcing" class="cake-layer" />
+        <img id="cakeTopping1" class="cake-layer" />
+        <img id="cakeTopping2" class="cake-layer" />
+        <img id="cakePlate" class="cake-layer" />
+      </div>
+      <h2>choose a plate :3</h2>
+      <div class="options-grid" id="optionsPlate"></div>
+      <button id="btnDone" disabled>
+        <img src="images/button_done.png" alt="Done" />
+      </button>
+    </div>
+  </div>
+
+  <canvas id="confettiCanvas"></canvas>
+  <script src="script.js"></script>
+</body>
+</html>

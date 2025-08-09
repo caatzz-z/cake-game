@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: url("images/background.png") center/cover no-repeat;
+  color: #222;
+}
+
+.screen {
+  display: none;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.screen.active {
+  display: flex;
+}
+
+.title {
+  font-size: 3em;
+  text-align: center;
+  width: 100%;
+}
+
+.left-panel {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 15px;
+  justify-items: center;
+}
+
+.options-grid img {
+  width: 120px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  transition: transform 0.2s, border-color 0.3s;
+}
+
+.options-grid img:hover {
+  transform: scale(1.1);
+}
+
+.options-grid img.selected {
+  border-color: hotpink;
+  transform: scale(1.1);
+}
+
+.cake-container {
+  width: 320px;
+  height: 320px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 25px hotpink;
+  position: relative;
+}
+
+.cake-layer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 320px;
+  max-height: 320px;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.cake-layer[src] {
+  display: block;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button img {
+  width: 160px;
+}
+
+#slideTransition {
+  position: fixed;
+  top: 0; left: 100%;
+  width: 100%; height: 100%;
+  background: pink url("images/polka.png");
+  z-index: 999;
+  transition: left 0.5s ease;
+}
+
+#slideTransition.active {
+  left: 0;
+}
+
+#confettiCanvas {
+  position: fixed;
+  pointer-events: none;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+}
